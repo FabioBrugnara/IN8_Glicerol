@@ -1,0 +1,66 @@
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+  035077       2       0                                                        
+ILL TAS data in the new ASCII format follow after the line VV..V                
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      80                                                                        
+IN8   in8         14-Aug-20 12:37:16                                            
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+INSTR: IN8
+USER_: in8
+FILE_: 035077
+DATE_: 14-Aug-20 12:37:16
+TITLE: Internal use
+TYPE_: tas
+COMND: bs ki 7.1 dki 0.1 np 10 mn 20000
+POSQE: QH=     -nan, QK=     -nan, QL=     -nan, EN=     -inf, UN=meV
+CURVE: MONO= auto, ANA= manu
+STEPS: KI=   0.1000
+PARAM: GONIO= 0
+PARAM: DM=   3.13553, DA=   3.35500, KFIX=   7.09784
+PARAM: SM=  1, SS= -1, SA=  1, FX=  1
+PARAM: ALF1= 600.00, ALF2= 600.00, ALF3= 600.00, ALF4= 600.00
+PARAM: BET1= 600.00, BET2= 600.00, BET3= 600.00, BET4= 600.00
+PARAM: ETAM=  30.00, ETAA=  30.00
+PARAM: AS=   5.43090, BS=   5.43090, CS=   5.43090
+PARAM: AA=  90.00000, BB=  90.00000, CC=  90.00000, ETAS=  30.00000
+PARAM: AX=  1.000, AY=  1.000, AZ= -2.000
+PARAM: BX= -1.000, BY= -1.000, BZ= -1.000
+VARIA: A1      =   8.11, A2      =  16.23, A3      =   0.00, A4      = -39.99
+VARIA: A5      =   0.00, A6      =   0.00, TM      =  24.00, CHPGCU  =   0.00
+VARIA: CHSI    =  91.08, RMSI111V= 180.08, RMSI111H= 346.42, RMSI311V= 574.82
+VARIA: RMSI311H=  89.93, RMPGV   =  85.18, RMPGH   = 104.65, RMCUV   =  10.11
+VARIA: RMCUH   =   9.82, DAG     =  24.97, DAC     =  -1.98, DBG     =  26.98
+VARIA: DBC     =   1.01, GU      =   0.00, GL      =   0.00, TU      = -27.00
+VARIA: TL      = -28.17, GA      =   0.00, TA      =   0.00, A3P     =-2275.85
+VARIA: RAH     =   4.10, RAV     =   9.87, RG      =-3004.71, D1T     =  29.88
+VARIA: D1B     =  30.12, D1R     =  15.04, D1L     =  15.04, D2T     =  30.12
+VARIA: D2B     =  30.12, D2R     =  14.92, D2L     =  15.04, D3T     =   0.00
+VARIA: D3B     =   0.00, D3R     =   0.00, D3L     =   0.00, DZ      =   0.00
+VARIA: DY      =   0.00, DC      =   0.00
+ZEROS: A1      = -15.38, A2      =-136.66, A3      =-180.00, A4      =-180.70
+ZEROS: A5      =  90.00, A6      =-179.80, TM      =   0.00, CHPGCU  =   0.00
+ZEROS: CHSI    =   0.00, RMSI111V=   0.00, RMSI111H=   0.00, RMSI311V=   0.00
+ZEROS: RMSI311H=   0.00, RMPGV   =   0.00, RMPGH   =   0.00, RMCUV   =   0.00
+ZEROS: RMCUH   =   0.00, DAG     =   0.00, DAC     =   0.00, DBG     =   0.00
+ZEROS: DBC     =   0.00, GU      =   0.00, GL      =   0.00, TU      =   0.57
+ZEROS: TL      =   0.43, GA      =   0.00, TA      =   0.00, A3P     =   0.00
+ZEROS: RAH     =   0.00, RAV     =   0.00, RG      = -19.71, D1T     =   0.00
+ZEROS: D1B     =   0.00, D1R     =   0.00, D1L     =   0.00, D2T     =   0.00
+ZEROS: D2B     =   0.00, D2R     =   0.00, D2L     =   0.00, D3T     =   0.00
+ZEROS: D3B     =   0.00, D3R     =   0.00, D3L     =   0.00, DZ      =   0.00
+ZEROS: DY      =   0.00, DC      =   0.00
+PARAM: MN=   20000
+PARAM: REACTOR=55.86
+FORMT:
+DATA_:
+  PNT        KI        M1        M2      TIME      CNTS         A1         A2         A4         A6         TM     CHPGCU      RMPGV      RMPGH        DBG        DBC        DAG        DAC 
+   1       7.0978    20000     1416   114.50    183127        8.110     16.230    -39.990      0.000     24.000      0.000     85.180    104.650     26.980      1.010     24.970     -1.980 
+   2       7.1992    20000     1440   125.94    188311        8.000     16.000    -39.990      0.000     24.000      0.000     85.180    104.650     26.730      1.010     24.970     -1.980 
+   3       7.2989    20000     1418   139.26    191724        7.880     15.780    -39.990      0.000     24.000      0.000     85.180    104.650     26.520      1.010     24.970     -1.980 
+   4       7.3967    20000     1534   152.04    193504        7.780     15.570    -39.990      0.000     24.000      0.000     85.180    104.650     26.320      1.010     24.970     -1.980 
+   5       7.4972    20000     1477   172.15    197493        7.670     15.360    -39.990      0.000     24.000      0.000     85.180    104.650     26.150      1.010     24.970     -1.980 
+   6       7.6005    20000     1506   192.40    202472        7.570     15.150    -39.990      0.000     24.000      0.000     85.180    104.650     25.950      1.010     24.970     -1.980 
+   7       7.6965    20000     1538   213.40    201415        7.470     14.960    -39.990      0.000     24.000      0.000     85.180    104.650     25.730      1.010     24.970     -1.980 
+   8       7.7950    20000     1459   233.11    199069        7.380     14.770    -39.990      0.000     24.000      0.000     85.180    104.650     25.550      1.010     24.970     -1.980 
+   9       7.8960    20000     1404   265.22    199382        7.280     14.580    -39.990      0.000     24.000      0.000     85.180    104.650     25.370      1.010     24.970     -1.980 
+  10       7.9942    20000     1466   300.18    203946        7.190     14.400    -39.990      0.000     24.000      0.000     85.180    104.650     25.200      1.010     24.970     -1.980 

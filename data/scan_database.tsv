@@ -1,0 +1,41 @@
+Nscan	name	notes
+# Cu(200)-Cu(400), kf=6.54, COLLIMATORI 20/20/30/30		
+# ALLINEAMENTO con Vanadio		
+# Abbiamo, sull'elastico, 70 conteggi al secondo a monitor, 5/6 volte rispetto a novembre!		
+50304	sc a5	STOP
+50305	sc a5	Scan a 2theta fisso per allineare l'analizzatore => 37.2545
+50306	sc a3	Allineamento slit nel pentolone a3 => 10
+50307	sc ei 69.68 dei 0.5 np 15 mn 2000	vediamo lo scan in energia
+# cambiato lo 0 ad A6		
+50308	sc ei 69.68 dei 0.5 np 15 mn 2000	rivediamo lo scan in ei
+50309	sc ei 69.68 dei 0.5 np 15 mn 2000	Facciamo una risoluzione al volo, andrà rifatta
+# EMPTY CELLS		
+# allineamento slits		
+50310	bs d1t 30	mettiamo la slit d1t a 20 mm
+50311	bs d1l 30	mettiamo la slit d1l a 13 mm
+# abbiamo fatto un po' di prove di conteggi sull'elastico della cella vuota. Il segnale veniva tagliato del 40% chiudendo in altezza a 3cm. Deidiamo di lavorare con le slit (davanti e dietro) a 40 in verticale (centrate) e 30 in orrizzontale (centrate).		
+50312	empty .7 300K 5000	
+50313	empty .9 300K 5000	
+50314	empty 1.1 300K 5000	
+50315	empty 1.5 300K 5000	
+50316	empty .7 160K 5000	
+50317	empty .9 160K 5000	
+50318	empty 1.1 160K 5000	
+50319	empty 1.5 160K 5000	
+50320		
+50321		
+50322		
+50323		
+50324		
+50325		
+50326		
+50327		
+50328		
+50329		
+50330		
+50331		
+50332		
+50333		
+50334		
+50335		
+50336		
