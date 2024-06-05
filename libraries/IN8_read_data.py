@@ -176,6 +176,7 @@ def gen_data_df_specJun24(datasheet, folder):
     data.set_index('Nscan', inplace=True)
     data = data[['name', 'notes',  'date', 'time', 'QM', 'E', 'steps', 'command', 'param', 'variab', 'zeros', 'data']]
 
+############################################################################
 
     data.loc['050321+050322'] =    {'name': np.nan,
                                     'QM': data.loc[50321].QM,
@@ -184,6 +185,10 @@ def gen_data_df_specJun24(datasheet, folder):
                                     'command': data.loc[50321].command,
                                     'data': pd.concat([data.loc[50321].data, data.loc[50322].data], axis=0).reset_index(drop=True),
                                     }
+    data.loc['050321+050322'].data.index +=1
+    data.loc['050321+050322'].data.index.name = 'PNT'
+
+
     return data
 
 
