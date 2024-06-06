@@ -153,7 +153,21 @@ def read_IN8scan_specJun24(Nscan, folder):
 
 
 
+def sum_meas(data, A, B):
+        temp = data.loc[A].data.copy()
+        temp.CNTS += data.loc[B].data.CNTS
+        temp.dCNTS = np.sqrt(temp.CNTS)
+        temp.M1 += data.loc[B].data.M1
+        temp.M2 += data.loc[B].data.M2
+        temp.TIME += data.loc[B].data.TIME
+        temp.TT = np.NaN
+        temp.TRT = np.NaN
 
+        out =  {'QM': data.loc[A].QM,
+                'steps': data.loc[A].steps,
+                'data': temp,
+                }
+        return out
 
 def gen_data_df_specJun24(datasheet, folder):
     if type(datasheet) == str:
@@ -176,8 +190,9 @@ def gen_data_df_specJun24(datasheet, folder):
     data.set_index('Nscan', inplace=True)
     data = data[['name', 'notes',  'date', 'time', 'QM', 'E', 'steps', 'command', 'param', 'variab', 'zeros', 'data']]
 
-############################################################################
+#################################################################################################################################################################
 
+#### SUM the empty cell sampled at 1 deg step with the second part (three points)
     data.loc['050321+050322'] =    {'name': np.nan,
                                     'QM': data.loc[50321].QM,
                                     'E': data.loc[50321].E,
@@ -187,6 +202,23 @@ def gen_data_df_specJun24(datasheet, folder):
                                     }
     data.loc['050321+050322'].data.index +=1
     data.loc['050321+050322'].data.index.name = 'PNT'
+
+
+#### SUM the S(Q) of glycerol 300K sampled at different theta
+    A = data.loc[50325].data.copy()
+    B = data.loc[50327].data.copy()
+    A.index = 2*A.index -1
+    B.index = 2*B.index
+    data.loc['050325+050327'] =    {'data': pd.concat([A,B], axis=0).sort_index()}
+    data.loc['050325+050327+050328'] = sum_meas(data, '050325+050327', 50328)
+
+#### SUM the empty cells at different temperatures
+
+    data.loc['050312+050316'] = sum_meas(data, 50312, 50316)
+    data.loc['050313+050317'] = sum_meas(data, 50313, 50317)
+    data.loc['050314+050318'] = sum_meas(data, 50314, 50318)
+    data.loc['050315+050319'] = sum_meas(data, 50315, 50319)
+    data.loc['050331+050332'] = sum_meas(data, 50331, 50332)
 
 
     return data

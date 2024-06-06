@@ -22,20 +22,28 @@ Nscan	name	notes
 50317	empty .9 160K 5000	
 50318	empty 1.1 160K 5000	
 50319	empty 1.5 160K 5000	
-50320		
-50321		
-50322		
-50323		
-50324		
-50325		
-50326		
-50327		
-50328		
-50329		
-50330		
-50331		
-50332		
-50333		
-50334		
-50335		
-50336		
+50320		STOP
+50321	S(Q) empty cell (bs A4 -2 da4 -1 np 30 mn 10000)	Misura fatta salendo in temperatura (partita a T=187K)
+50322	continuazione fino a 3.5 S(Q) empty cell	Alla fine abbiamo aggiunto solo 3 punti dato che si vedono i Brag ( (bs A4 -32 da4 -1) poi stoppata)
+50323	Vanadium .7 270K 3000	Misura fatta a 270K! Criostato bloccato!
+50324	Cadmium .7 300K 5000	Criostato ok. Presa per controllare i pochi conteggi della cella vuota
+# Glycerol		
+50325	S(Q) glycerol 300K mn 1000 ps 33	
+50326	Glycerol .7 300K mn 10000	
+50327	S(Q) glycerol 300K mn 1000 ps 32	intermediate points a4  -2.5, -3.5, ...
+50328	S(Q) glycerol 300K mn 1000 ps 65	S(Q) campionata  in a4 ogni 0.5
+50329	Glycerol 0.9 300K mn 10000	Da unire alla 50325!
+50330	Glycerol 1.1 300K mn 10000	
+50331	Glycerol 1.5 300K mn 3500	La statistica non è sufficiente, bisogna contare 10000 a monitor
+50332	Glycerol 1.5 300K mn 6500	
+50333	S(Q) glycerol 160K mn 1000 ps 65 (prima)	
+50334	Glycerol .7 160K mn 20000	
+50335	Glycerol 0.9 160K mn 20000	
+50336	Glycerol 1.1 160K mn 20000	
+50337	Glycerol 1.5 160K mn 20000	
+50338	S(Q) glycerol 160K mn 1000 ps 65 (dopo)	
+50339		
+50340		
+50341		
+50342		
+50343		
