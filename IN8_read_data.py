@@ -212,6 +212,13 @@ def gen_data_df_specJun24(datasheet, folder):
     data.loc['050325+050327'] =    {'data': pd.concat([A,B], axis=0).sort_index()}
     data.loc['050325+050327+050328'] = sum_meas(data, '050325+050327', 50328)
 
+#### SUM the S(Q) of glycerol 160K sampled at different theta
+    A = data.loc[50333].data.copy()
+    B = data.loc[50339].data.copy()
+    A.index = 2*A.index -1
+    B.index = 2*B.index
+    data.loc['50333+50339'] =    {'data': pd.concat([A,B], axis=0).sort_index()}
+
 #### SUM the empty cells at different temperatures
 
     data.loc['050312+050316'] = sum_meas(data, 50312, 50316)
@@ -219,6 +226,19 @@ def gen_data_df_specJun24(datasheet, folder):
     data.loc['050314+050318'] = sum_meas(data, 50314, 50318)
     data.loc['050315+050319'] = sum_meas(data, 50315, 50319)
     data.loc['050331+050332'] = sum_meas(data, 50331, 50332)
+
+#### CORRECT THE WRONG CURVATURE MEASUREMENTS (200K)
+    c = 0.94985
+    data.loc[50346].data.CNTS = data.loc[50346].data.CNTS/c
+    data.loc[50346].data.dCNTS = data.loc[50346].data.dCNTS/c
+    data.loc[50347].data.CNTS = data.loc[50347].data.CNTS/c
+    data.loc[50347].data.dCNTS = data.loc[50347].data.dCNTS/c
+    data.loc[50348].data.CNTS = data.loc[50348].data.CNTS/c
+    data.loc[50348].data.dCNTS = data.loc[50348].data.dCNTS/c
+    data.loc[50349].data.CNTS = data.loc[50349].data.CNTS/c
+    data.loc[50349].data.dCNTS = data.loc[50349].data.dCNTS/c
+    data.loc[50350].data.CNTS = data.loc[50350].data.CNTS/c
+    data.loc[50351].data.dCNTS = data.loc[50351].data.dCNTS/c
 
 
     return data

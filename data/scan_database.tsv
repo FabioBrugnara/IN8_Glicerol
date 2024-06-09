@@ -41,9 +41,26 @@ Nscan	name	notes
 50335	Glycerol 0.9 160K mn 20000	
 50336	Glycerol 1.1 160K mn 20000	
 50337	Glycerol 1.5 160K mn 20000	
-50338	S(Q) glycerol 160K mn 1000 ps 65 (dopo)	
-50339		
-50340		
-50341		
-50342		
-50343		
+50338	Glycerol .5 169K mn 20000	
+50339	S(Q) glycerol 160K mn 1000 ps 65 (dopo)	
+50340	//	Da buttare interrotto dopo 3 punti
+50341	Glycerol 1.5 160K mn 20000 EN -31, -30.5 (2pt)	Scan sul bordo sx del range dinamico, vogliamo vedere la regione in cui la seconda armonica entra all'anlizzatore
+50342	Glycerol 1.5 160K mn 20000 EN -31.3 (1pt)	
+50343	Glycerol 1.5 160K mn 18000 HR	
+50344	Glycerol 1.5 200K mn 18000 HR	
+50345	S(Q) glycerol 200K mn 1000 ps 65 (prima)	
+50346	Glycerol .7 200K mn 18000	
+50347	Glycerol 0.9 200K mn 18000	
+50348	Glycerol 1.1 200K mn 18000	
+50349	Glycerol 1.5 200K mn 18000	
+50350	Glycerol .5 200K mn 18000	
+50351	S(Q) glycerol 200K mn 1000 ps 65 (dopo)	
+50352		
+50353		
+50354		
+50355		
+50356		
+50357		
+50358		
+50359		
+50360		
