@@ -192,7 +192,21 @@ def gen_data_df_specJun24(datasheet, folder):
 
 #################################################################################################################################################################
 
-#### SUM the empty cell sampled at 1 deg step with the second part (three points)
+#### CORRECT THE WRONG CURVATURE MEASUREMENTS (200K)
+    c = 0.94985
+    data.loc[50346].data.CNTS = data.loc[50346].data.CNTS/c
+    data.loc[50346].data.dCNTS = data.loc[50346].data.dCNTS/c
+    data.loc[50347].data.CNTS = data.loc[50347].data.CNTS/c
+    data.loc[50347].data.dCNTS = data.loc[50347].data.dCNTS/c
+    data.loc[50348].data.CNTS = data.loc[50348].data.CNTS/c
+    data.loc[50348].data.dCNTS = data.loc[50348].data.dCNTS/c
+    data.loc[50349].data.CNTS = data.loc[50349].data.CNTS/c
+    data.loc[50349].data.dCNTS = data.loc[50349].data.dCNTS/c
+    data.loc[50350].data.CNTS = data.loc[50350].data.CNTS/c
+    data.loc[50351].data.dCNTS = data.loc[50351].data.dCNTS/c
+
+
+#### SUM the empty cell S(Q) 
     data.loc['050321+050322'] =    {'name': np.nan,
                                     'QM': data.loc[50321].QM,
                                     'E': data.loc[50321].E,
@@ -218,6 +232,7 @@ def gen_data_df_specJun24(datasheet, folder):
     A.index = 2*A.index -1
     B.index = 2*B.index
     data.loc['50333+50339'] =    {'data': pd.concat([A,B], axis=0).sort_index()}
+    data.loc['50333+50339'].reset_index(drop=True)
 
 #### SUM the empty cells at different temperatures
 
@@ -225,24 +240,104 @@ def gen_data_df_specJun24(datasheet, folder):
     data.loc['050313+050317'] = sum_meas(data, 50313, 50317)
     data.loc['050314+050318'] = sum_meas(data, 50314, 50318)
     data.loc['050315+050319'] = sum_meas(data, 50315, 50319)
-    data.loc['050331+050332'] = sum_meas(data, 50331, 50332)
 
-#### CORRECT THE WRONG CURVATURE MEASUREMENTS (200K)
-    c = 0.94985
-    data.loc[50346].data.CNTS = data.loc[50346].data.CNTS/c
-    data.loc[50346].data.dCNTS = data.loc[50346].data.dCNTS/c
-    data.loc[50347].data.CNTS = data.loc[50347].data.CNTS/c
-    data.loc[50347].data.dCNTS = data.loc[50347].data.dCNTS/c
-    data.loc[50348].data.CNTS = data.loc[50348].data.CNTS/c
-    data.loc[50348].data.dCNTS = data.loc[50348].data.dCNTS/c
-    data.loc[50349].data.CNTS = data.loc[50349].data.CNTS/c
-    data.loc[50349].data.dCNTS = data.loc[50349].data.dCNTS/c
-    data.loc[50350].data.CNTS = data.loc[50350].data.CNTS/c
-    data.loc[50351].data.dCNTS = data.loc[50351].data.dCNTS/c
+#### SOMMO RUN DEL GLICEROLO
+    # 300K, 1.5
+    data.loc['50331+50332'] = sum_meas(data, 50331, 50332)
+    data.loc['50331+50332+50361'] = sum_meas(data, '50331+50332', 50361)
+    # 300K, .7
+    data.loc['50326+50358'] = sum_meas(data, 50326, 50358)
+    # 300K, .9
+    data.loc['50329+50359'] = sum_meas(data, 50329, 50359)
+    # 300K, 1.1
+    data.loc['50330+50360'] = sum_meas(data, 50330, 50360)
 
+
+
+
+#### Merge the singles points at 1.5
+
+    # EMPTY CELL
+    A = data.loc[50382].data.copy()
+    B = data.loc[50381].data.copy()
+    B.index = [2,3]
+    C = data.loc['050315+050319'].data.copy()
+    C.index = C.index + 3
+    data.loc['050315+050319+50381+50382'] = {'data': pd.concat([A, B, C])}
+    # GLYCEROL 160K
+    A = data.loc[50342].data.copy()
+    B = data.loc[50341].data.copy()
+    B.index = [2,3]
+    C = data.loc[50337].data.copy()
+    C.index = C.index + 3
+    data.loc['50337+50341+50342'] = {'data': pd.concat([A, B, C])}
+
+    # GLYCEROL 200K
+    A = data.loc[50350].data.copy()
+    B = data.loc[50349].data.copy()
+    B.index = B.index + 1
+    data.loc['50349+50350'] = {'data': pd.concat([A, B])}
+
+    # GLYCEROL 300K
+
+    A = data.loc[50363].data.copy()
+    B = data.loc[50362].data.copy()
+    B.index = [2,3]
+    C = data.loc['50331+50332+50361'].data.copy()
+    C.index = C.index + 3
+    data.loc['50331+50332+50361+50362+50363'] = {'data': pd.concat([A, B, C])}
+
+    # CADMIUM
+    A = data.loc[50388].data.copy()
+    B = data.loc[50387].data.copy()
+    B.index = B.index + 1
+    data.loc['50387+50388'] = {'data': pd.concat([A, B])}
 
     return data
 
 
 
 
+def load_mus():
+
+    ##########################################
+    ##### Attenuation leghts calculation #####
+    ##########################################
+
+    NA = 6.02214076e23 # Avogadro's number
+
+    M = {} # Molar mass
+    M['H2O'] = 18.01528 # g/mol
+    M['D2O'] = 20.0276
+    M['C3D8O3']  = 99.98
+    M['C3H8O3'] = 92.09382
+
+    ### Liquid molar densities ###
+    rho = {} # moles/cm^3
+    rho['gly'] = lambda T: -2.076146803104599e-08 * T**2 + 2.9401571051129395e-06 * T + 0.014600038465097229
+    rho['d2'] = 1.11 / M['D2O'] # heavy water density = 1.11 g/cm^3, M in g/mol
+    rho['h2'] = 1 / M['H2O'] # water density = 1 g/cm^3, M in g/mol
+
+    ### Cross sections ###
+
+    # Bound total scattering cross section [barn]
+    sigma = {}
+    sigma['D'] = 7.64 + 0.000519 # barn
+    sigma['H'] = 82.02 + 0.3326 # barn
+    sigma['O'] = 4.232 + 0.00019 # barn
+    sigma['C'] = 5.551 + 0.0035 # barn
+
+    # Heavy water cross section
+    sigma['d2'] = lambda E: 1.53112713e+01 - 3.87942317e-02*E + 1.12174957e-04*E**2
+
+    # Build other molecular cross sections
+    sigma['Dnb'] = lambda E: (sigma['d2'](E)-sigma['O'])/2
+    sigma['gly'] = lambda E: 8*sigma['Dnb'](E) + 3*sigma['C'] + 3*sigma['O']
+
+    # Attenuation coefficient
+    mu = {}
+    mu['d2'] = lambda E: sigma['d2'](E)*1e-24 * rho['d2'] * NA
+    mu['gly'] = lambda E, T: sigma['gly'](E) *1e-24 * rho['gly'](T) * NA
+    mu['V'] = lambda E: 0.346 + 0.193 * np.sqrt(80.8/E)
+
+    return mu

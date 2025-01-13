@@ -1,66 +1,106 @@
-Nscan	name	notes
-# Cu(200)-Cu(400), kf=6.54, COLLIMATORI 20/20/30/30		
-# ALLINEAMENTO con Vanadio		
-# Abbiamo, sull'elastico, 70 conteggi al secondo a monitor, 5/6 volte rispetto a novembre!		
-50304	sc a5	STOP
-50305	sc a5	Scan a 2theta fisso per allineare l'analizzatore => 37.2545
-50306	sc a3	Allineamento slit nel pentolone a3 => 10
-50307	sc ei 69.68 dei 0.5 np 15 mn 2000	vediamo lo scan in energia
-# cambiato lo 0 ad A6		
-50308	sc ei 69.68 dei 0.5 np 15 mn 2000	rivediamo lo scan in ei
-50309	sc ei 69.68 dei 0.5 np 15 mn 2000	Facciamo una risoluzione al volo, andrà rifatta
-# EMPTY CELLS		
-# allineamento slits		
-50310	bs d1t 30	mettiamo la slit d1t a 20 mm
-50311	bs d1l 30	mettiamo la slit d1l a 13 mm
-# abbiamo fatto un po' di prove di conteggi sull'elastico della cella vuota. Il segnale veniva tagliato del 40% chiudendo in altezza a 3cm. Deidiamo di lavorare con le slit (davanti e dietro) a 40 in verticale (centrate) e 30 in orrizzontale (centrate).		
-50312	empty .7 300K 5000	
-50313	empty .9 300K 5000	
-50314	empty 1.1 300K 5000	
-50315	empty 1.5 300K 5000	
-50316	empty .7 160K 5000	
-50317	empty .9 160K 5000	
-50318	empty 1.1 160K 5000	
-50319	empty 1.5 160K 5000	
-50320		STOP
-50321	S(Q) empty cell (bs A4 -2 da4 -1 np 30 mn 10000)	Misura fatta salendo in temperatura (partita a T=187K)
-50322	continuazione fino a 3.5 S(Q) empty cell	Alla fine abbiamo aggiunto solo 3 punti dato che si vedono i Brag ( (bs A4 -32 da4 -1) poi stoppata)
-50323	Vanadium .7 270K 3000	Misura fatta a 270K! Criostato bloccato!
-50324	Cadmium .7 300K 5000	Criostato ok. Presa per controllare i pochi conteggi della cella vuota
-# Glycerol		
-50325	S(Q) glycerol 300K mn 1000 ps 33	
-50326	Glycerol .7 300K mn 10000	
-50327	S(Q) glycerol 300K mn 1000 ps 32	intermediate points a4  -2.5, -3.5, ...
-50328	S(Q) glycerol 300K mn 1000 ps 65	S(Q) campionata  in a4 ogni 0.5
-50329	Glycerol 0.9 300K mn 10000	Da unire alla 50325!
-50330	Glycerol 1.1 300K mn 10000	
-50331	Glycerol 1.5 300K mn 3500	La statistica non è sufficiente, bisogna contare 10000 a monitor
-50332	Glycerol 1.5 300K mn 6500	
-50333	S(Q) glycerol 160K mn 1000 ps 65 (prima)	
-50334	Glycerol .7 160K mn 20000	
-50335	Glycerol 0.9 160K mn 20000	
-50336	Glycerol 1.1 160K mn 20000	
-50337	Glycerol 1.5 160K mn 20000	
-50338	Glycerol .5 169K mn 20000	
-50339	S(Q) glycerol 160K mn 1000 ps 65 (dopo)	
-50340	//	Da buttare interrotto dopo 3 punti
-50341	Glycerol 1.5 160K mn 20000 EN -31, -30.5 (2pt)	Scan sul bordo sx del range dinamico, vogliamo vedere la regione in cui la seconda armonica entra all'anlizzatore
-50342	Glycerol 1.5 160K mn 20000 EN -31.3 (1pt)	
-50343	Glycerol 1.5 160K mn 18000 HR	
-50344	Glycerol 1.5 200K mn 18000 HR	
-50345	S(Q) glycerol 200K mn 1000 ps 65 (prima)	
-50346	Glycerol .7 200K mn 18000	
-50347	Glycerol 0.9 200K mn 18000	
-50348	Glycerol 1.1 200K mn 18000	
-50349	Glycerol 1.5 200K mn 18000	
-50350	Glycerol .5 200K mn 18000	
-50351	S(Q) glycerol 200K mn 1000 ps 65 (dopo)	
-50352		
-50353		
-50354		
-50355		
-50356		
-50357		
-50358		
-50359		
-50360		
+Nscan	name	notes	
+# Cu(200)-Cu(400), kf=5.8, COLLIMATORI 20/20/30/30			
+# ALLINEAMENTO con Vanadio			
+# Abbiamo, sull'elastico, 70 conteggi al secondo a monitor, 5/6 volte rispetto a novembre!			
+50304	sc a5	STOP	
+50305	sc a5	Scan a 2theta fisso per allineare l'analizzatore => 37.2545	
+50306	sc a3	Allineamento slit nel pentolone a3 => 10	
+50307	sc ei 69.68 dei 0.5 np 15 mn 2000	vediamo lo scan in energia	
+# cambiato lo 0 ad A6			
+50308	sc ei 69.68 dei 0.5 np 15 mn 2000	rivediamo lo scan in ei	
+50309	sc ei 69.68 dei 0.5 np 15 mn 2000	Facciamo una risoluzione al volo, andrà rifatta	
+# EMPTY CELLS			
+# allineamento slits			
+50310	bs d1t 30	mettiamo la slit d1t a 20 mm	
+50311	bs d1l 30	mettiamo la slit d1l a 13 mm	
+# abbiamo fatto un po' di prove di conteggi sull'elastico della cella vuota. Il segnale veniva tagliato del 40% chiudendo in altezza a 3cm. Deidiamo di lavorare con le slit (davanti e dietro) a 40 in verticale (centrate) e 30 in orrizzontale (centrate).			
+50312	empty .7 300K 5000		
+50313	empty .9 300K 5000		
+50314	empty 1.1 300K 5000		
+50315	empty 1.5 300K 5000		
+50316	empty .7 160K 5000		
+50317	empty .9 160K 5000		
+50318	empty 1.1 160K 5000		
+50319	empty 1.5 160K 5000		
+50320		STOP	
+50321	S(Q) empty cell (bs A4 -2 da4 -1 np 30 mn 10000)	Misura fatta salendo in temperatura (partita a T=187K)	
+50322	continuazione fino a 3.5 S(Q) empty cell	Alla fine abbiamo aggiunto solo 3 punti dato che si vedono i Brag ( (bs A4 -32 da4 -1) poi stoppata)	
+# VANADIUM			
+50323	Vanadium .7 270K 3000	Misura fatta a 270K! Criostato bloccato!	
+# CADMIUM			
+50324	Cadmium .7 300K 5000	Criostato ok. Presa per controllare i pochi conteggi della cella vuota	
+# GLYCEROL			
+# 300K			
+50325	S(Q) glycerol 300K mn 1000 ps 33		
+50326	Glycerol .7 300K mn 10000		
+50327	S(Q) glycerol 300K mn 1000 ps 32	intermediate points a4  -2.5, -3.5, ...	
+50328	S(Q) glycerol 300K mn 1000 ps 65	S(Q) campionata  in a4 ogni 0.5	
+50329	Glycerol 0.9 300K mn 10000		
+50330	Glycerol 1.1 300K mn 10000		
+50331	Glycerol 1.5 300K mn 3500	La statistica non è sufficiente, bisogna contare 10000 a monitor	
+50332	Glycerol 1.5 300K mn 6500		
+# 160K			
+50333	S(Q) glycerol 160K mn 1000 ps 65 (prima)		
+50334	Glycerol .7 160K mn 20000		
+50335	Glycerol 0.9 160K mn 20000		
+50336	Glycerol 1.1 160K mn 20000		
+50337	Glycerol 1.5 160K mn 20000		
+50338	Glycerol .5 160K mn 20000		
+50339	S(Q) glycerol 160K mn 1000 ps 65 (dopo)		
+50340	//	buttare	
+50341	Glycerol 1.5 160K mn 20000 EN -31, -30.5 (2pt)	Scan sul bordo sx del range dinamico, vogliamo vedere la regione in cui la seconda armonica entra all'anlizzatore	
+50342	Glycerol 1.5 160K mn 20000 EN -31.3 (1pt)		
+50343	Glycerol 1.5 160K mn 18000 HR		
+# 200K (most with non-optimal h focusing (WC = wrong configuration))			
+50344	Glycerol 1.5 200K mn 18000 HR		
+50345	//	Da buttare, non avevamo riportato ki 5.8	
+50346	Glycerol .7 200K mn 18000 WC		
+50347	Glycerol .9 200K mn 18000 WC		
+50348	Glycerol 1.1 200K mn 18000 WC		
+50349	Glycerol 1.5 200K mn 18000 WC	I due punti sono già contenuti nella misura	
+50350	Glycerol 1.5 200K mn 18000  (1pt -31.3 ) WC		
+50351	Glycerol .5 200K mn 18000 WC		
+50352	S(Q) glycerol 200K mn 2000 ps 65 (dopo)	Contiamo al doppio per recuperare quella di prima che abbiamo buttato	
+50353	//	buttare	
+# VANADIUM (WC and HR)			
+50354	Vanadium 0.7 256K wrong curvatures		
+50355	Vanadium 1.5 256K HR 		
+# GLYCEROL			
+# 300K			
+50356	Glycerol 1.5 300K mn 100000 np 1	Questo e il punto seguente serve per ricalibrare le intensità nella configurazione WC	
+50357	Glycerol 1.5 300K mn 100000 np 1 WC		
+50358	Glycerol .7 300K mn 8000		
+50359	Glycerol .9 300K mn 8000		
+50360	Glycerol 1.1 300K mn 8000		
+50361	Glycerol 1.5 300K mn 8000		
+50362	Glycerol 1.5 300K mn 18000 np EN -31 -30.5 (2pt)		
+50363	Glycerol 1.5 300K mn 18000 np EN -31.3 (1pt)		
+50364	Glycerol .5 300K mn 18000		
+50365	Glycerol 1.5 300K mn 18000 HR		
+# MISURE TRASMISSIONE			
+50366	//	Misure per capire quando chiudere le slit	
+50367	//		
+50368	//		
+50369	//		
+50370	//		
+50371	//		
+50372	Glycerol bs A4 -2 dA4 .02 np 21 mn 500	ABBIAMO TROVATO UN OFFSET IN A4 !!!	
+50373	Glycerol sc A4 -0.78 dA4 .01 np 21 mn 500	campioniamo piu fitto => A4 offset = -0.78	
+50374	Glycerol bs Ei 39.72 dei 2 np 31mn 1500	GLYCEROL TRASMISSION	
+50375	Empty cryostat sc A4 -0.78 dA4 .01 np 21 mn 500	Ki sbagliato	
+50376	Empty cryostat  bs Ei 39.72 dei 2 np 31mn 1500	CRYOSTAT TRASMISSION
+50377	Empty cryostat sc A4 -0.78 dA4 .01 np 21 mn 500	RIFATTO!	
+50378	Empty cell sc A4 -0.78 dA4 .01 np 21 mn 500		
+50379	Empty cell bs Ei 39.72 dei 2 np 31mn 1500	EMPTY CELL TRASMISSION	
+# EMPTY CELLS			
+50380	empty .5 300K 5000		
+50381	empty 1.5 300K 5000 2pt (-31, -30.5)		
+50382	empty 1.5 300K 5000 1pt (-31.3)		
+50383	empty 1.5 300K 5000 HR		
+# CADMIUM			
+50384	cadmium 1.5 300K 5000 HR		
+50385	cadmium .9 300K 5000		
+50386	cadmium 1.1 300K 5000		
+50387	cadmium 1.5 300K 5000		
+50388	cadmium 1.5 300K 1pt (-31.3)		
+50389	cadmium .5 300K 5000		

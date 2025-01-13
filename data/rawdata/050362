@@ -1,0 +1,62 @@
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+  050362       2       0                                                        
+ILL TAS data in the new ASCII format follow after the line VV..V                
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      80                                                                        
+IN8   fabiobrugnar10-Jun-24 05:28:17                                            
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+INSTR: IN8
+EXPNO: TEST-3382
+USER_: fabiobrugnara
+LOCAL: PIOVANO
+FILE_: 050362
+DATE_: 10-Jun-24 05:28:17
+TITLE: Glycerol 
+TYPE_: tas
+COMND: bs qh 1.5 0 0 -31 dqh 0 0 0 0.5 np 2 mn 18000
+POSQE: QH=  -1.3903, QK=   0.0000, QL=   0.5634, EN= -31.0032, UN=meV
+CURVE: MONO= auto, ANA= manu
+STEPS: EN=   0.5000
+PARAM: GONIO= 0
+PARAM: DM=   1.80745, DA=   0.90370, KFIX=   5.80001
+PARAM: SM=  1, SS= -1, SA=  1, FX=  2
+PARAM: ALF1=  20.00, ALF2=  20.00, ALF3=  30.00, ALF4=  30.00
+PARAM: BET1= 600.00, BET2= 600.00, BET3= 600.00, BET4= 600.00
+PARAM: ETAM=  30.00, ETAA=  30.00
+PARAM: AS=   6.28320, BS=   6.28320, CS=   6.28320
+PARAM: AA=  90.00000, BB=  90.00000, CC=  90.00000, ETAS=  30.00000
+PARAM: AX= -1.000, AY=  0.000, AZ=  0.000
+PARAM: BX=  0.000, BY=  0.000, BZ= -1.000
+PARAM: Plexi1= out, Plexi2= out
+VARIA: A1      =  23.72, A2      =  47.43, A3      =  10.70, A4      =  -2.92
+VARIA: A5      =  36.82, A6      =  73.65, TM      =  20.52, CHPGCU  = -91.05
+VARIA: CHSI    =   0.00, RMSI111V= 589.80, RMSI111H= 407.88, RMSI311V= 574.89
+VARIA: RMSI311H=  89.68, RMPGV   =  85.15, RMPGH   = 104.97, RMCUV   = 120.52
+VARIA: RMCUH   =   9.34, DAG     =  30.00, DAC     =  -2.00, DBG     =  61.99
+VARIA: DBC     =   0.99, GU      =  -0.04, GL      =   0.00, TU      =  23.39
+VARIA: TL      =  24.65, GA      =   0.02, TA      =   2.00, A3P     =-1485.68
+VARIA: RAH     =   1.00, RAV     =   4.00, RG      = -19.71, D1T     =  20.00
+VARIA: D1B     =  20.00, D1R     =  15.04, D1L     =  15.04, D2T     =  20.00
+VARIA: D2B     =  20.00, D2R     =  15.04, D2L     =  15.04, D3T     =  44.50
+VARIA: D3B     =  44.50, D3R     =  21.00, D3L     =  21.00, DZ      =   2.50
+VARIA: DY      =   2.00, DC      =  -5.00, ROT     =   0.00
+ZEROS: A1      = -15.26, A2      =-136.67, A3      =-180.00, A4      =-180.76
+ZEROS: A5      =  90.09, A6      =-180.01, TM      =   0.00, CHPGCU  =   0.00
+ZEROS: CHSI    =   0.00, RMSI111V=   0.00, RMSI111H=   0.00, RMSI311V=   0.00
+ZEROS: RMSI311H=   0.00, RMPGV   =   0.00, RMPGH   =   0.00, RMCUV   =   0.00
+ZEROS: RMCUH   =   0.00, DAG     =   0.00, DAC     =   0.00, DBG     =   0.00
+ZEROS: DBC     =   0.00, GU      =   0.00, GL      =   0.00, TU      =   0.00
+ZEROS: TL      =   0.00, GA      =   0.00, TA      =   0.00, A3P     =-423.11
+ZEROS: RAH     =   0.00, RAV     =   0.00, RG      = -19.71, D1T     =   0.00
+ZEROS: D1B     =   0.00, D1R     =   0.00, D1L     =   0.00, D2T     =   0.00
+ZEROS: D2B     =   0.00, D2R     =   0.00, D2L     =   0.00, D3T     =   0.00
+ZEROS: D3B     =   0.00, D3R     =   0.00, D3L     =   0.00, DZ      =   2.50
+ZEROS: DY      =   2.00, DC      =  -5.00, ROT     =   0.00
+PARAM: MN=   18000
+PARAM: TT=    299.37, RT=    299.99
+PARAM: REACTOR=49.98
+FORMT:
+DATA_:
+  PNT        QH        QK        QL        EN        M1        M2      TIME      CNTS         A2         A4         A6         QM         TT        TRT 
+   1      -1.3903    0.0000    0.5634  -31.0032    18000      916   290.45       159       47.430     -2.920     73.650      1.500    299.367    299.993 
+   2      -1.3259    0.0000    0.7003  -30.4905    18000      336   284.46       157       47.100     -4.370     73.650      1.500    299.353    300.004 

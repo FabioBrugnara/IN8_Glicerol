@@ -1,0 +1,91 @@
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+  050374       2       0                                                        
+ILL TAS data in the new ASCII format follow after the line VV..V                
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      80                                                                        
+IN8   fabiobrugnar10-Jun-24 15:23:54                                            
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+INSTR: IN8
+EXPNO: TEST-3382
+USER_: fabiobrugnara
+LOCAL: PIOVANO
+FILE_: 050374
+DATE_: 10-Jun-24 15:23:54
+TITLE: Glycerol 
+TYPE_: tas
+COMND: bs ei 39.72 dei 2 np 31 mn 1500
+POSQE: QH=  -1.3814, QK=   0.0000, QL=   0.3434, EN= -29.9828, UN=meV
+CURVE: MONO= auto, ANA= manu
+STEPS: EI=   2.0000
+PARAM: GONIO= 0
+PARAM: DM=   1.80745, DA=   0.90370, KFIX=   5.80001
+PARAM: SM=  1, SS= -1, SA=  1, FX=  2
+PARAM: ALF1=  20.00, ALF2=  20.00, ALF3=  30.00, ALF4=  30.00
+PARAM: BET1= 600.00, BET2= 600.00, BET3= 600.00, BET4= 600.00
+PARAM: ETAM=  30.00, ETAA=  30.00
+PARAM: AS=   6.28320, BS=   6.28320, CS=   6.28320
+PARAM: AA=  90.00000, BB=  90.00000, CC=  90.00000, ETAS=  30.00000
+PARAM: AX= -1.000, AY=  0.000, AZ=  0.000
+PARAM: BX=  0.000, BY=  0.000, BZ= -1.000
+PARAM: Plexi1= in, Plexi2= out
+VARIA: A1      =  23.39, A2      =  46.78, A3      =  10.70, A4      =  -0.80
+VARIA: A5      =  -4.00, A6      =  73.65, TM      =  20.52, CHPGCU  = -91.05
+VARIA: CHSI    =   0.00, RMSI111V= 589.80, RMSI111H= 407.88, RMSI311V= 574.89
+VARIA: RMSI311H=  89.68, RMPGV   =  85.15, RMPGH   = 104.97, RMCUV   =   9.88
+VARIA: RMCUH   =   9.34, DAG     =  30.01, DAC     =  -2.00, DBG     =  61.99
+VARIA: DBC     =   0.99, GU      =  -0.04, GL      =   0.00, TU      =  23.47
+VARIA: TL      =  24.70, GA      =   0.02, TA      =   2.00, A3P     =-1485.68
+VARIA: RAH     =   1.00, RAV     =   4.00, RG      = -19.71, D1T     =  20.00
+VARIA: D1B     =  20.00, D1R     =  12.03, D1L     =  14.08, D2T     =  20.00
+VARIA: D2B     =  20.00, D2R     =  15.04, D2L     =   9.99, D3T     =  44.50
+VARIA: D3B     =  44.50, D3R     =  21.00, D3L     =  21.00, DZ      =   2.50
+VARIA: DY      =   2.00, DC      =  -5.00, ROT     =   0.00
+ZEROS: A1      = -15.26, A2      =-136.67, A3      =-180.00, A4      =-180.76
+ZEROS: A5      =  90.09, A6      =-180.01, TM      =   0.00, CHPGCU  =   0.00
+ZEROS: CHSI    =   0.00, RMSI111V=   0.00, RMSI111H=   0.00, RMSI311V=   0.00
+ZEROS: RMSI311H=   0.00, RMPGV   =   0.00, RMPGH   =   0.00, RMCUV   =   0.00
+ZEROS: RMCUH   =   0.00, DAG     =   0.00, DAC     =   0.00, DBG     =   0.00
+ZEROS: DBC     =   0.00, GU      =   0.00, GL      =   0.00, TU      =   0.00
+ZEROS: TL      =   0.00, GA      =   0.00, TA      =   0.00, A3P     =-423.11
+ZEROS: RAH     =   0.00, RAV     =   0.00, RG      = -19.71, D1T     =   0.00
+ZEROS: D1B     =   0.00, D1R     =   0.00, D1L     =   0.00, D2T     =   0.00
+ZEROS: D2B     =   0.00, D2R     =   0.00, D2L     =   0.00, D3T     =   0.00
+ZEROS: D3B     =   0.00, D3R     =   0.00, D3L     =   0.00, DZ      =   2.50
+ZEROS: DY      =   2.00, DC      =  -5.00, ROT     =   0.00
+PARAM: MN=    1500
+PARAM: TT=    299.40, RT=    300.00
+PARAM: REACTOR=50.06
+FORMT:
+DATA_:
+  PNT        EI        M1        M2      TIME      CNTS 
+   1      39.7194     1500    48186    62.84         1   
+   2      41.7195     1500    47863    52.44         0   
+   3      43.7346     1500    51844    53.18         6   
+   4      45.7274     1500    54357    52.15         0   
+   5      47.7386     1500    59634    54.54         1   
+   6      49.7321     1500    60317    52.46         3   
+   7      51.7378     1500    64401    54.77         2   
+   8      53.7182     1500    65651    58.23         2   
+   9      55.7377     1500    68462    67.81         1   
+  10      57.7337     1500    72687    62.05         1   
+  11      59.7216     1500    76366    60.99         4   
+  12      61.7218     1500    77132    58.75         0   
+  13      63.7271     1500    79840    59.34         1   
+  14      65.7294     1500    85109    62.53         3   
+  15      67.7197     1500    83790    59.21         4   
+  16      69.7276     1500    90475    64.30         3   
+  17      71.7481     1500    91668    71.31         2   
+  18      73.7339     1500    93283    84.07         0   
+  19      75.7177     1500    99710    79.42         3   
+  20      77.7394     1500    97849    75.69         3   
+  21      79.7025     1500   100007    77.70         2   
+  22      81.7432     1500   102469    82.05         3   
+  23      83.7625     1500   106982    87.67         6   
+  24      85.7530     1500   115519    90.70         0   
+  25      87.7619     1500   118543    89.92         2   
+  26      89.6725     1500   113791    92.18         4   
+  27      91.7661     1500   116370    94.84         5   
+  28      93.6908     1500   111588    92.14         2   
+  29      95.7413     1500   121385    98.67         7   
+  30      97.7310     1500   126128   104.18         2   
+  31      99.7176     1500   126875   114.08         5   
